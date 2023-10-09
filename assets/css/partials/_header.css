@@ -5,7 +5,7 @@
 }
 
 .logocentro {
-    display: inline-block;
+    display:inline-block;
     background-color: #000; /* Fondo negro para el contenedor del logo */
     padding: 3px; /* Espacio alrededor del logo */
 }
