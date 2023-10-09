@@ -12,6 +12,18 @@
 
 
 .logo {
-    max-width: 90px;
+    max-width: 100px;
     height: auto;
+}
+
+.links {
+    display: flex;
+    flex-direction: row; /* Coloca los enlaces en línea */
+    background-color:aquamarine;
+    margin: auto;
+}
+.links a{
+    margin: 15px 150px; /* Espacio entre los enlaces */
+    text-decoration: none; /* Elimina la subrayado de los enlaces */
+    color: black; /* Color del texto de los enlaces */
 }
