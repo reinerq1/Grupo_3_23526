@@ -1,0 +1,11 @@
+.logo {
+    width: 200px; /* Establece el ancho deseado en píxeles */
+    height: auto; /* Esto mantiene la proporción de aspecto original */
+}
+
+.logocentro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh; /* Establece el alto del contenedor para ocupar toda la ventana */
+}
