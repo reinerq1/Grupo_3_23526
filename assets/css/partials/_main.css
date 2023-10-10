@@ -2,3 +2,32 @@ body {
     background-color: bisque;
     margin: 0px;
 }
+
+/* Estilos para los botones */
+.boton-buzo {
+    background-image: url(../../../images/buzo.jpeg);
+    background-size: cover;
+    color: #f7f4f4;
+    font-size: 50px;
+    padding: 150px 200px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+.boton-remera {
+    background-image: url(../../../images/reme.jpeg) ;
+    background-size: cover;
+    color: #fefefe;
+    font-size: 50px;
+    padding: 150px 200px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  /* Contenedor de botones */
+  .botones-seleccion {
+    text-align: center;
+    margin-top: 20px;
+  }
