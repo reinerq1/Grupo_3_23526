@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <header>
+    <nav>
+      <div class="rectangulo">
+        <div class="logocentro">
+          <img class="logo" src="../images/logo.jpeg"> 
+        </div>
+      </div>
+      <ul class="links">
+        <a href="../index.html">Inicio</a>
+          <a href="crearcuenta.html">Crear cuenta</a>
+          <a href="./mayorista.html">Mayorista</a>
+          <a href="./nosotros.html">Nosotros</a>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <main class="main__crear_cuenta">
+      <h1>Crear una cuenta:</h1>
+      <Form class="form__crear_cuenta" action="../index.html">
+        <div class="div__datos_personales">
+          <p class="p__datos_personales">Las opciones marcadas con "*" son obligatórias.</p>
+          <ul>
+          <li>Nombre:* <input type="text" required  class="input__datos_personales"></li> 
+          <li>Apellido:* <input type="text" required class="input__datos_personales"></li>
+          <li>Email:* <input type="email" required class="input__datos_personales" placeholder="Ej: vorx@email.com"></li>
+          <li>Contraseña:* <input type="password" required class="input__datos_personales" placeholder="min. 8  max. 16 caracteres" minlength="8" maxlength="16"></li>
+        </ul>
+        </div>
+        <div class="div__consumidores">
+          <ul>
+            <li>Fecha de nacimiento: <input type="date"></li>
+            <p class="p__consumidores">¿Cómo nos conociste?:</p> 
+              <li><label for="_midias"><input type="radio" id="_midias" name="consumidor1" class="input__consumidores" value="midias sociales">Midias sociales</label></li>
+              <li><label for="_indicacion"><input type="radio" id="_indicacion" name="consumidor1" class="input__consumidores" value="indicacion de un amgio">Indicación de un amigo</label></li>
+              <li><label for="_otro"><input type="radio" id="_otro" name="consumidor1" class="input__consumidores" value="otro">Otro</label></li>
+            <p class="p__consumidores">Genero:</p>
+            <li><label for="_masculino_genero"><input type="radio" id="_masculino_genero" name="consumidor2" class="input__consumidores" value="masculino">Masculino</li>
+            <li><label for="_feminino_genero"><input type="radio" id="_feminino_genero" name="consumidor2" class="input__consumidores" value="feminino">Feminino</label></li>
+            <li><label for="_otro_genero"><input type="radio" id="_otro_genero" name="consumidor2" class="input__consumidores" value="otro">Otro</label></li>
+          </ul>
+        </div>
+        <input type="submit" name="enviar">
+      </Form>
+     </main>
+  </body>
+  <footer class="__contactanos">
+    <div>
+      <h1>CONTÁCTANOS</h1>
+      <ul>
+        <li><a href="https://www.instagram.com/" target="_blank">Ir a instagram</a>
+        </li>
+        <li><a href="https://m.facebook.com/login/?locale=es_ES" target="_blank">Ir a Facebook</a>
+        </li>
+        <li><a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" target="_blank">Ir a Tiktok</a>
+        </li>
+        <li><a href="./pages/nosotros.html" target="_blank">Nosotros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer">datos</p>
+      <p>&copy; 2023 Seu Nome. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</html>
