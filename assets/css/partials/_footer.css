@@ -1,17 +1,41 @@
 footer {
-    text-align: center;
-    padding: 3px;
-    background-color: aquamarine;
-    color: black;
-  }
-
-/*.redes_sociales {
-  list-style: none;
-  text-decoration: none black;  
+  text-align: center;
+  padding: 3px;
+  background-color: aquamarine;
+  color: black;
 }
 
+.redes_sociales {
+  text-align: center;
+  list-style: none;
+  text-decoration: none black;
+  
+  .icono-ig img{
+    width: 45px;
+    height: 45px;
+  }
+  .icono-fb img{
+    width: 45px;
+    height: 45px;
+  }   
+  .icono-tiktok img{
+    width: 45px;
+    height: 45px;
+  }
+  .icono-wtspp img{
+    width: 45px;
+    height: 45px;
+  }
+}
+  
 .ul_Nosotros {
   list-style: none;
   text-decoration: none black;
-}*/
+
+  .Nosotros{
+    list-style: none;
+    text-decoration: none black;
+  }
+  
+}
 
