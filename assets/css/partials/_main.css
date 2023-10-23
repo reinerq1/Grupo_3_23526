@@ -1,4 +1,4 @@
-  body {
+body {
     background-color: bisque;
     margin: 0px;
 }
@@ -29,5 +29,5 @@
   /* Contenedor de botones */
   .botones-seleccion {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 150px;
   }

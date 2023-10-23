@@ -1,41 +1,28 @@
-footer {
+footer{
+  background-color:aquamarine;
+}
+.footer-container {
+  display: flex; /* Utiliza un contenedor flexible para los elementos hijos */
+  
+  justify-content:space-between; /* Distribuye los elementos con espacio entre ellos */
+  
+  align-items:center; /* Alinea los elementos verticalmente en el centro */
+}
+
+.seccion ul{
+  margin: 2px; /* Agrega margen entre las secciones si es necesario */
+}
+
+.copyright {
   text-align: center;
-  padding: 3px;
-  background-color: aquamarine;
-  color: black;
+  padding: 10px 0; /* Espaciado en la parte superior e inferior del copyright */
 }
 
-.redes_sociales {
-  text-align: center;
-  list-style: none;
-  text-decoration: none black;
-  
-  .icono-ig img{
-    width: 45px;
-    height: 45px;
-  }
-  .icono-fb img{
-    width: 45px;
-    height: 45px;
-  }   
-  .icono-tiktok img{
-    width: 45px;
-    height: 45px;
-  }
-  .icono-wtspp img{
-    width: 45px;
-    height: 45px;
-  }
+/* Estilos para los íconos de redes sociales */
+.icono-ig img,
+.icono-fb img,
+.icono-tiktok img,
+.icono-wtspp img {
+  width: 45px;
+  height: 45px;
 }
-  
-.ul_Nosotros {
-  list-style: none;
-  text-decoration: none black;
-
-  .Nosotros{
-    list-style: none;
-    text-decoration: none black;
-  }
-  
-}
-

@@ -1,8 +1,17 @@
-.rectangulo {
+header {
     background-color: #000; /* Fondo negro */
-    padding: 3px; /* Ajusta la altura del rectángulo negro */
-    text-align: center; /* Centra el contenido horizontalmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
+
+.rectangulo{
+    text-align: center; /* Centra el contenido horizontalmente */
+    
+}
+
 
 .logocentro {
     display:inline-block;
@@ -12,7 +21,7 @@
 
 
 .logo {
-    max-width: 100px;
+    max-width: 85px;
     height: auto;
 }
 
