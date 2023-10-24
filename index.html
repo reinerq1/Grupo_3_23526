@@ -6,26 +6,67 @@
     <title>Vorx - Inicio</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="icon" href="./images/logo.ico.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
   </head>
 
   <body>
-    <header>
-      <nav>
-        <div class="rectangulo"> 
-          <div class="logocentro">
+    <header class="header__index">
+
+      <div class="div__menu_responsive">
+        <div class="div__logocentro">
           <a href="index.html">
-            <img class="logo" src="./images/logo.jpeg" alt="Logo de Mi Página">
-          </a>          
-          </div>
+            <img
+              class="img__logo"
+              src="./images/logo.jpeg"
+              alt="Logo de Mi Página"
+            />
+          </a>
         </div>
-        <ul class="links">
-          <!--<a href="index.html">Inicio</a>-->
-          <a href="./pages/crearcuenta.html">Crear cuenta</a>
-          <a href="./pages/mayorista.html">Mayorista</a>
-          <a href="./pages/nosotros.html">Nosotros</a>
-        </ul>
-      </nav>
+        <div class="div__menu_hamburguesa">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <div class="div__menu">
+
+        <div class="div__logocentro">
+          <a href="index.html">
+            <img
+              class="img__logo"
+              src="./images/logo.jpeg"
+              alt="Logo de Mi Página"
+            />
+          </a>
+        </div>
+
+        <div class="div__nav">
+          <nav>
+            <ul class="ul__nav">
+              <!--<a href="index.html">Inicio</a>-->
+              <li class="li__nav">
+                <a class="a__nav" href="./pages/crearcuenta.html"
+                  >Crear cuenta</a
+                >
+              </li>
+              <li class="li__nav">
+                <a class="a__nav" href="./pages/mayorista.html">Mayorista</a>
+              </li>
+              <li class="li__nav">
+                <a class="a__nav" href="./pages/nosotros.html">Nosotros</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+
     </header>
+    
     <main>
       <div class="botones-seleccion">
         <button class="boton-buzo">Buzos</button>
@@ -38,19 +79,39 @@
           <ul class="SIGUENOS">
             <h3>SIGUENOS</h3>
             <li>
-              <a href="https://www.instagram.com/" class="icono-ig" target="_blank"><img src="./images/ig.png" alt="logo de ig"></a>
+              <a
+                href="https://www.instagram.com/"
+                class="icono-ig"
+                target="_blank"
+                ><img src="./images/ig.png" alt="logo de ig"
+              /></a>
             </li>
             <li>
-              <a href="https://m.facebook.com/login/?locale=es_ES" class="icono-fb" target="_blank"><img src="./images/facebook.ico.ico" alt="logo de ig"></a>
+              <a
+                href="https://m.facebook.com/login/?locale=es_ES"
+                class="icono-fb"
+                target="_blank"
+                ><img src="./images/facebook.ico.ico" alt="logo de ig"
+              /></a>
             </li>
             <li>
-              <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" class="icono-tiktok" target="_blank"><img src="./images/tiktok.png" alt="logo de ig"></a>
+              <a
+                href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des"
+                class="icono-tiktok"
+                target="_blank"
+                ><img src="./images/tiktok.png" alt="logo de ig"
+              /></a>
             </li>
             <li>
-              <a href="https://web.whatsapp.com/" class="icono-wtspp" target="_blank"><img src="./images/whatsapp.jpeg" alt="logo de ig"></a>
+              <a
+                href="https://web.whatsapp.com/"
+                class="icono-wtspp"
+                target="_blank"
+                ><img src="./images/whatsapp.jpeg" alt="logo de ig"
+              /></a>
             </li>
           </ul>
-        
+
           <ul class="CONOCENOS">
             <h3>CONOCENOS</h3>
             <br />
@@ -65,10 +126,9 @@
             ></iframe>
           </ul>
         </div>
-      </div>
-      </div>  
-      <div class="copyright">
-        <p>&copy; 2023 GRUPO_3_23526. Todos os direitos reservados.</p>
+        <div class="copyright">
+          <p>&copy; 2023 GRUPO_3_23526. Todos os direitos reservados.</p>
+        </div>
       </div>
     </footer>
   </body>
