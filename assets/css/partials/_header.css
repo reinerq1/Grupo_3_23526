@@ -1,26 +1,30 @@
-.div__logocentro {
-  background-color: black;
-  display: flex;
-  justify-content: space-around;
+header{
+  position: sticky;
+  top: 0px;
 }
-.img__logo {
-  max-width: 85px;
-  height: auto;
-}
-.div__nav {
-  background-color: aquamarine;
-}
-.ul__nav {
-  margin: 0px;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  padding: 20px 0px;
-  .a__nav {
-    text-decoration: none;
-    color: black;
+  .div__logocentro {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
   }
-}
+  .img__logo {
+    max-width: 85px;
+    height: auto;
+  }
+  .div__nav {
+    background-color: aquamarine;
+  }
+  .ul__nav {
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+    .a__nav {
+      text-decoration: none;
+      color: black;
+    }
+  }
 .div__menu_responsive {
   display: none;
 }
