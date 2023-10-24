@@ -1,33 +1,53 @@
 body {
-    background-color: bisque;
-    margin: 0px;
+  background-color: bisque;
+  margin: 0px;
 }
-
-/* Estilos para los botones */
-.boton-buzo {
-    background-image: url(../../../images/buzo.jpeg);
-    background-size: cover;
-    color: #f7f4f4;
-    font-size: 50px;
-    padding: 150px 200px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.main__index {
+  display: flex;
+  justify-content: space-around;
+  .div__remera {
+    background-color: rgba(128, 128, 128, 0.493);
+    border-radius: 8px;
+    margin: 30px 0px;
+    .a__remera {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      text-align: center;
+      color: black;
+      padding: 5px;
+    }
+    .img__remera {
+      max-width: 350px;
+      height: auto;
+      border-radius: 8px;
+    }
   }
-.boton-remera {
-    background-image: url(../../../images/reme.jpeg) ;
-    background-size: cover;
-    color: #fefefe;
-    font-size: 50px;
-    padding: 150px 200px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  .div__buzo {
+    background-color: rgba(128, 128, 128, 0.493);
+    border-radius: 8px;
+    margin: 30px 0px;
+    .a__buzo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      text-align: center;
+      color: black;
+      padding: 5px;
+    }
+    .img__buzo {
+      max-width: 350px;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
 }
-  /* Contenedor de botones */
-  .botones-seleccion {
-    text-align: center;
-    margin-top: 150px;
+@media (max-width: 768px) {
+  .main__index {
+    display: block;
+    margin: 20px;
+    .div__buzo {
+      margin-top: 10px;
+    }
   }
+}
