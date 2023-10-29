@@ -1,10 +1,11 @@
 footer{
   background-color:aquamarine;
+  text-align: center; /* Centra horizontalmente */
 }
 .footer-container {
   display: flex; /* Utiliza un contenedor flexible para los elementos hijos */
   
-  justify-content:space-between; /* Distribuye los elementos con espacio entre ellos */
+  justify-content: space-around; /* Distribuye los elementos con espacio entre ellos */
   
   align-items:center; /* Alinea los elementos verticalmente en el centro */
 }
@@ -15,7 +16,9 @@ footer{
 }
 
 .copyright {
+  background-color: black;
   text-align:center;
+  color: white;
   padding: 10px 0; /* Espaciado en la parte superior e inferior del copyright */
 }
 
