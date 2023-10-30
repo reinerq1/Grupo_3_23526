@@ -51,3 +51,38 @@ body {
     }
   }
 }
+
+.main__crear_cuenta {
+  padding-left: 5px;
+  margin-bottom: 30px;
+
+  .form__crear_cuenta {
+    margin-bottom: 5px;
+
+    .div__datos_personales {
+      margin: 5px;
+      .ul__datos_personales {
+        padding-left: 0px;
+        list-style: none;
+      }
+      .input__datos_personales {
+        display: block;
+        margin: 5px 0px;
+        border-radius: 8px;
+      }
+    }
+    .div__consumidores {
+      margin: 5px;
+      .ul__consumidores {
+        list-style: none;
+        padding-left: 0px;
+        .p__consumidores {
+          padding: 5px;
+        }
+        .li__consumidores {
+         padding: 5px;
+        }
+      }
+    }
+  }
+}
