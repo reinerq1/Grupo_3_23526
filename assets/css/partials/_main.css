@@ -15,6 +15,7 @@ body {
       text-decoration: none;
       text-align: center;
       color: black;
+      font-family: var(--font__display_y_enlaces);
       padding: 5px;
     }
     .img__remera {
@@ -32,6 +33,7 @@ body {
       flex-direction: column;
       text-decoration: none;
       text-align: center;
+      font-family: var(--font__display_y_enlaces);
       color: black;
       padding: 5px;
     }
@@ -55,6 +57,7 @@ body {
 .main__crear_cuenta {
   padding-left: 5px;
   margin-bottom: 30px;
+  font-family: var(--font__body);
 
   .form__crear_cuenta {
     margin-bottom: 5px;

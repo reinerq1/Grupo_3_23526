@@ -21,6 +21,8 @@ header{
     justify-content: space-around;
     padding: 20px 0px;
     .a__nav {
+      font-family: var(--font__display_y_enlaces);
+      font-size: large;
       text-decoration: none;
       color: black;
     }
