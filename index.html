@@ -16,28 +16,35 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap"
       rel="stylesheet"
     />
+    <script src="./assets/js/script.js"></script>
   </head>
 
   <body>
     <header class="header__index">
-      <div class="div__menu_responsive">
-        <div class="div__logocentro">
-          <a href="index.html">
-            <img
-              class="img__logo"
-              src="./images/logo.jpeg"
-              alt="Logo de Mi Página"
-            />
-          </a>
-        </div>
-        <div class="div__menu_hamburguesa">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-      </div>
-
       <div class="div__menu">
+        <div class="div__menu_responsive">
+          <div class="div__logocentro_reponsive">
+            <a href="index.html">
+              <img
+                class="img__logo"
+                src="./images/logo.jpeg"
+                alt="Logo de Mi Página"
+              />
+            </a>
+          </div>
+          <div class="div__menu_hamburguesa">
+            <button class="button__menu_responsive" id="menu_responsive">
+              <img src="./images/faviconmenuhamb.ico" alt="menu">
+            </button>
+            <button
+              class="button__cerrar_menu_responsive"
+              id="cerrar_menu_responsive"
+            >
+            <img src="./images/faviconfechar.ico" alt="cerrar">
+            </button>
+          </div>
+        </div>
+
         <div class="div__logocentro">
           <a href="index.html">
             <img
@@ -48,8 +55,8 @@
           </a>
         </div>
 
-        <div class="div__nav">
-          <nav>
+        <div class="div__nav" id="div__navegador">
+          <nav class="nav__menu" id="nav">
             <ul class="ul__nav">
               <!--<a href="index.html">Inicio</a>-->
               <li class="li__nav">
@@ -133,7 +140,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9292.279021737671!2d-58.409410585345505!3d-34.570850883825315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb57475fd5245%3A0x5eefd3cd753143d7!2sPlanetario%20Galileo%20Galilei!5e0!3m2!1ses!2sar"
             width="300"
             height="150"
-            style="border: none;"
+            style="border: none"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"

@@ -1,52 +1,88 @@
-header{
+header {
   position: sticky;
   top: 0px;
 }
-  .div__logocentro {
-    background-color: black;
-    display: flex;
-    justify-content: space-around;
+.div__logocentro {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+}
+.div__logocentro_reponsive {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+}
+.img__logo {
+  max-width: 85px;
+  height: auto;
+}
+.div__nav {
+  background-color: aquamarine;
+}
+.ul__nav {
+  margin: 0px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px;
+  .a__nav {
+    font-family: var(--font__display_y_enlaces);
+    font-size: large;
+    text-decoration: none;
+    color: black;
   }
-  .img__logo {
-    max-width: 85px;
-    height: auto;
-  }
-  .div__nav {
-    background-color: aquamarine;
-  }
-  .ul__nav {
-    margin: 0px;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px 0px;
-    .a__nav {
-      font-family: var(--font__display_y_enlaces);
-      font-size: large;
-      text-decoration: none;
-      color: black;
-    }
-  }
+}
 .div__menu_responsive {
   display: none;
 }
-.bar {
-  width: 30px;
-  height: 3px;
-  background-color: black;
-  margin: 4px 0;
-}
+
+
 @media (max-width: 768px) {
   .div__menu_responsive {
     display: block;
     cursor: pointer;
-    /* padding: 0px 10px; */
   }
   .div__menu_hamburguesa {
     background-color: aquamarine;
     padding: 10px;
   }
-  .div__menu {
+  .div__logocentro {
     display: none;
+  }
+  .button__cerrar_menu_responsive {
+    display: none;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 2px;
+  }
+  .button__cerrar_menu_responsive.block {
+    display: block;
+  }
+  .button__menu_responsive{
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 2px;
+  }
+  .button__menu_responsive.none{
+    display: none;
+
+  }
+  .div__nav {
+    display: none;
+    .ul__nav {
+      display: flex;
+      flex-direction: column;
+      .li__nav {
+        margin: 5px;
+        
+      }
+    }
+  }
+  .div__nav.block{
+    display: block;
   }
 }
