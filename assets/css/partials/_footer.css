@@ -4,11 +4,11 @@ footer{
   font-family: var(--font__footer)
 }
 .footer-container {
-  display: flex; /* Utiliza un contenedor flexible para los elementos hijos */
+  display: flex; 
   
-  justify-content: space-around; /* Distribuye los elementos con espacio entre ellos */
+  justify-content: space-around; 
   
-  align-items:center; /* Alinea los elementos verticalmente en el centro */
+  align-items:center; 
 }
 
 .seccion ul{

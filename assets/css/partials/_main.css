@@ -91,8 +91,8 @@ body {
 }
 
 .main_nosotros_columna {
-  border: 1px solid #ccc; /* Agrega un borde de 1 píxel sólido con color gris claro */
-  padding: 20px; /* Agrega un espacio interno de 20 píxeles alrededor del contenido */
+  border: 1px solid #ccc; 
+  padding: 20px; 
   table {
     border-collapse: collapse;
     width: 100%;
@@ -112,7 +112,7 @@ body {
 }
 
 .compra_segura, .medios_de_pago, .envios_a_todo_el_pais {
-  border: 1px solid #000; /* Agrega un borde de 1 píxel sólido con color negro a las celdas con las clases específicas */
+  border: 1px solid #000; 
   border-radius: 8px;
   margin: 30px 0px;
   justify-content: space-around
