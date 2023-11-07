@@ -1,6 +1,7 @@
 footer{
   background-color:aquamarine;
   text-align: center; /* Centra horizontalmente */
+  font-family: var(--font__footer)
 }
 .footer-container {
   display: flex; /* Utiliza un contenedor flexible para los elementos hijos */
