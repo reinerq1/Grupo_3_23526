@@ -1,0 +1,34 @@
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    background-color: #dec492;
+}
+
+.product img {
+    max-width: 100%;
+}
+
+.product h3 {
+    font-size: 1.2em;
+}
+
+.product p {
+    font-size: 1em;
+}
+
+.buy-button {
+    background-color: #000000;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.buy-button:hover {
+    background-color: #000000;
+}
