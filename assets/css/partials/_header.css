@@ -3,6 +3,13 @@ header {
   top: 0px;
 }
 
+.header__index {
+  background-color: #fff; /* Puedes ajustar el color de fondo según tu diseño */
+  position: fixed;
+  width: 100%;
+  z-index: 1000; /* Asegúrate de que el z-index sea mayor que el de otros elementos en la página si es necesario */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra para destacar el header */
+}
 
 .div__logocentro {
   background-color: black;
