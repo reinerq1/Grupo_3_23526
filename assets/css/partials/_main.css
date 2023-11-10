@@ -36,13 +36,69 @@ body {
     }
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .div__menu_responsive {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .div__logocentro img {
+      max-height: 30px;
+  }
+
+  .div__menu_hamburguesa {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .button__menu_responsive,
+  .button__cerrar_menu_responsive {
+      margin-top: 5px;
+  }
+
+  .div__nav {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+  }
+
+  .nav__menu {
+      margin: 10px 0;
+  }
+
+  .ul__nav {
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+  }
+
+  .li__nav {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
   .main__index {
-    display: block;
-    margin: 20px;
-    .div__buzo {
-      margin-top: 10px;
-    }
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .div__remera,
+  .div__buzo {
+      margin-bottom: 20px;
+  }
+
+  .img__remera,
+  .img__buzo {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .footer-container {
+      flex-direction: column;
+      padding: 10px;
   }
 }
 
