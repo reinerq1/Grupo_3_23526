@@ -2,6 +2,8 @@ header {
   position: sticky;
   top: 0px;
 }
+
+
 .div__logocentro {
   background-color: black;
   display: flex;
@@ -18,6 +20,7 @@ header {
 }
 .div__nav {
   background-color: aquamarine;
+
 }
 .ul__nav {
   margin: 0px;
@@ -30,6 +33,7 @@ header {
     font-size: large;
     text-decoration: none;
     color: black;
+
   }
 }
 .div__menu_responsive {

@@ -14,3 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
     botonCerrarMenu.classList.remove("block");
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var products = document.querySelectorAll(".product");
+
+  setTimeout(function () {
+      products.forEach(function (product) {
+          product.style.opacity = "1";
+          product.style.transform = "translateY(0)";
+      });
+  }, 500);
+});

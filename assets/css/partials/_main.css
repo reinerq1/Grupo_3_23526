@@ -5,39 +5,29 @@ body {
 .main__index {
   display: flex;
   justify-content: space-around;
-  .div__remera {
+  .div__remera,
+  .div__buzo {
+    padding: 20px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 5s;
     background-color: rgba(128, 128, 128, 0.493);
     border-radius: 8px;
     margin: 30px 0px;
+
+    .a__buzo,
     .a__remera {
       display: flex;
       flex-direction: column;
       text-decoration: none;
       text-align: center;
+
       color: black;
       font-family: var(--font__display_y_enlaces);
       padding: 5px;
     }
+    .img__buzo,
     .img__remera {
-      max-width: 350px;
-      height: auto;
-      border-radius: 8px;
-    }
-  }
-  .div__buzo {
-    background-color: rgba(128, 128, 128, 0.493);
-    border-radius: 8px;
-    margin: 30px 0px;
-    .a__buzo {
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      text-align: center;
-      font-family: var(--font__display_y_enlaces);
-      color: black;
-      padding: 5px;
-    }
-    .img__buzo {
       max-width: 350px;
       height: auto;
       border-radius: 8px;
@@ -117,3 +107,32 @@ body {
   margin: 30px 0px;
   justify-content: space-around
   }
+
+.div__remera {
+    animation: slideFromLeft 1s ease-out;
+}
+
+.div__buzo {
+    animation: slideFromRight 1s ease-out;
+}
+
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
