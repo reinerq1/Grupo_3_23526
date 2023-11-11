@@ -50,6 +50,20 @@ a {
     font-family: var(--font__body);
 }
 
+.logo__nosotros {
+    width: 400px;
+    height: 400px;
+    margin-right: 50px;
+    animation: girar 1.5s;
+  }
+
+  @keyframes girar {
+
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+
 
 
 
