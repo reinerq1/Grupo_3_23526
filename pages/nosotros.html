@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="../assets/js/script.js"></script>
   </head>
   <body>
@@ -52,7 +56,6 @@
         <div class="div__nav" id="div__navegador">
           <nav class="nav__menu" id="nav">
             <ul class="ul__nav">
-              <!--<a href="index.html">Inicio</a>-->
               <li class="li__nav">
                 <a class="a__nav" href="../index.html">Inicio</a>
               </li>
@@ -67,30 +70,46 @@
         </div>
       </div>
     </header>
-    <main class="main_nosotros_columna">
-      <div class="Nosotros_columnas"></div>
-      <table>
-        <tr>
-          <td class="compra_segura">COMPRA SEGURA</td>
-          <td class="medios_de_pago">MEDIOS DE PAGO</td>
-          <td class="envios_a_todo_el_pais">ENVIOS A TODO EL PAÍS</td>
-        </tr>
-        <tr>
-          <td class="compra_segura">
-            Gestionamos tus datos, compras y pagos de una manera segura y
-            confidencial.
-          </td>
-          <td class="medios_de_pago">
-            Aceptamos todos los medios de pago del mercado "Efectivo, Débito,
-            Crédito, Mercado Pago".
-          </td>
-          <td class="envios_a_todo_el_pais">
-            Todas las compras llegarán a tus manos, ya que contamos con envios a
-            todo el país en tiempo record.
-          </td>
-        </tr>
-      </table>
+
+    <main class="contenedor-informacion-util">
+      <div class="contenedor-info-util">
+        <div class="pago-seguro">
+          <img src="../images/pago-seguro.png"
+          width="80"
+          height="80">
+          <p>Gestionamos tus datos y compras con absoluta confidencialidad.</p>
+        </div>
+        <div class="medios-de-pago">
+          <img src="../images/tarjeta-de-credito.png"
+          width="80"
+          height="80">
+          <p>Aceptamos pagos en efectivo y con tarjetas de todos los bancos a través de Mercado Pago.</p>
+        </div>
+        <div class="envios-a-todo-el-pais">
+          <img src="../images/camion-de-reparto.png"
+          width="80"
+          height="80">
+          <p>Envios a todo el pais comprando un minimo de 30.000$</p>
+        </div>
+      </div>
     </main>
+    <!--<main class="main__index">
+      <div class="div__remera animate__animated animate__bounceIn style="text-align: center;>
+        <a class="a__remera">
+          <img class="img__remera" src="../images/compra-segura-2.png" />
+        </a>
+      </div>
+      <div class="div__buzo animate__animated animate__bounceIn">
+        <a class="a__buzo">
+          <img class="img__buzo" src="../images/mediosdepago2.png" />
+        </a>
+      </div>
+      <div class="div__buzo animate__animated animate__bounceIn">
+        <a class="a__buzo">
+          <img class="img__buzo" src="../images/envios-a-todo-el-pais.png" />
+        </a>
+      </div>
+    </main>-->
 
     <footer>
       <div class="footer-container">
