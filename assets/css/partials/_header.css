@@ -4,7 +4,7 @@ header {
 }
 
 .header__index {
-  background-color: #fff; /* Puedes ajustar el color de fondo según tu diseño */
+  background-color: beige; /* Puedes ajustar el color de fondo según tu diseño */
   position: fixed;
   width: 100%;
   z-index: 1000; /* Asegúrate de que el z-index sea mayor que el de otros elementos en la página si es necesario */
@@ -49,34 +49,33 @@ header {
 
 
 @media (max-width: 768px) {
+  .imgham{
+    max-width: 40px;
+    max-height: 40px;
+  }
   .div__menu_responsive {
     display: block;
     cursor: pointer;
+    background-color: black;
   }
   .div__menu_hamburguesa {
-    background-color: aquamarine;
-    padding: 10px;
+    background-color: black;
+   
   }
   .div__logocentro {
     display: none;
   }
   .button__cerrar_menu_responsive {
     display: none;
-    background: transparent;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
-    margin: 2px;
+    background: black;
+  
   }
   .button__cerrar_menu_responsive.block {
     display: block;
   }
   .button__menu_responsive{
-    background: transparent;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
-    margin: 2px;
+    background: black;
+   
   }
   .button__menu_responsive.none{
     display: none;
@@ -94,6 +93,7 @@ header {
     }
   }
   .div__nav.block{
+    padding-top: 2px;
     display: block;
   }
 }
