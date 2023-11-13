@@ -14,7 +14,7 @@ header {
 .div__logocentro {
   background-color: black;
   display: flex;
-  justify-content: space-around;
+  
 }
 .div__logocentro_reponsive {
   background-color: black;
