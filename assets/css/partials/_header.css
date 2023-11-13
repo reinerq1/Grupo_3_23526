@@ -14,7 +14,6 @@ header {
 .div__logocentro {
   background-color: black;
   display: flex;
-  
 }
 .div__logocentro_reponsive {
   background-color: black;
@@ -27,7 +26,6 @@ header {
 }
 .div__nav {
   background-color: aquamarine;
-
 }
 .ul__nav {
   margin: 0px;
@@ -40,27 +38,26 @@ header {
     font-size: large;
     text-decoration: none;
     color: black;
-
   }
 }
 .div__menu_responsive {
   display: none;
 }
 
-
 @media (max-width: 768px) {
-  .imgham{
+  .imgham {
     max-width: 40px;
     max-height: 40px;
   }
   .div__menu_responsive {
-    display: block;
     cursor: pointer;
     background-color: black;
+    display: flex;
+    justify-content: space-between;
   }
   .div__menu_hamburguesa {
     background-color: black;
-   
+    margin: 15px;
   }
   .div__logocentro {
     display: none;
@@ -68,31 +65,28 @@ header {
   .button__cerrar_menu_responsive {
     display: none;
     background: black;
-  
   }
   .button__cerrar_menu_responsive.block {
     display: block;
   }
-  .button__menu_responsive{
+  .button__menu_responsive {
     background: black;
-   
   }
-  .button__menu_responsive.none{
+  .button__menu_responsive.none {
     display: none;
-
   }
   .div__nav {
     display: none;
     .ul__nav {
       display: flex;
       flex-direction: column;
+      align-items: center;
       .li__nav {
         margin: 5px;
-        
       }
     }
   }
-  .div__nav.block{
+  .div__nav.block {
     padding-top: 2px;
     display: block;
   }
