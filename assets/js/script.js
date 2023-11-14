@@ -25,3 +25,36 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }, 500);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const enviarForm = document.getElementById("enviar");
+  const formulario = document.querySelector("#formularioCrearCuenta");
+  function exibirAlerta() {
+    const camposObligatorios = document.getElementsByClassName(
+      "input__datos_personales"
+    );
+    let todosCamposLlenos = true;
+
+    for (var i = 0; i < camposObligatorios.length; i++) {
+      const valorCampo = camposObligatorios[i].value.trim();
+      if (valorCampo === "") {
+        todosCamposLlenos = false;
+        break;
+      }
+    }
+
+    if (todosCamposLlenos) {
+      var msg =
+        "Su cuenta fue creada correctamente! Haga click acá para seguir.";
+      alert(msg);
+      formulario.setAttribute("action", "../index.html");
+
+    } else {
+      var msg =
+        "Complete todos los campos para crear su cuenta. Haga click acá para seguir.";
+      alert(msg);
+    }
+  }
+
+  enviarForm.addEventListener("click", exibirAlerta);
+});

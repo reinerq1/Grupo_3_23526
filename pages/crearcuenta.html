@@ -69,14 +69,14 @@
   <body>
     <main class="main__crear_cuenta">
       <h1>Crear una cuenta:</h1>
-      <Form class="form__crear_cuenta" action="../index.html">
+      <Form class="form__crear_cuenta" id="formularioCrearCuenta">
         <div class="div__datos_personales">
           <p class="p__datos_personales">Las opciones marcadas con "*" son obligatórias.</p>
           <ul class="ul__datos_personales">
-          <li>Nombre:* <input type="text" required  class="input__datos_personales"></li> 
-          <li>Apellido:* <input type="text" required class="input__datos_personales"></li>
-          <li>Email:* <input type="email" required class="input__datos_personales" placeholder="Ej: vorx@email.com"></li>
-          <li>Contraseña:* <input type="password" required class="input__datos_personales" placeholder="min. 8  max. 16 caracteres" minlength="8" maxlength="16"></li>
+          <li>Nombre:* <input type="text"   class="input__datos_personales"></li> 
+          <li>Apellido:* <input type="text"  class="input__datos_personales"></li>
+          <li>Email:* <input type="email"  class="input__datos_personales" placeholder="Ej: vorx@email.com"></li>
+          <li>Contraseña:* <input type="password"  class="input__datos_personales" placeholder="min. 8  max. 16 caracteres" minlength="8" maxlength="16"></li>
         </ul>
         </div>
         <div class="div__consumidores">
@@ -92,7 +92,7 @@
             <li class="li__consumidores"><label for="_otro_genero"><input type="radio" id="_otro_genero" name="consumidor2" class="input__consumidores" value="otro">Otro</label></li>
           </ul>
         </div>
-        <input type="submit" name="enviar">
+        <input type="submit" id="enviar" name="enviar">
       </Form>
      </main>
 
