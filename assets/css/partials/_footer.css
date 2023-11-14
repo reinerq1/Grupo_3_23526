@@ -4,14 +4,13 @@ footer{
   font-family: var(--font__footer)
 }
 .footer-container {
-  display: flex; 
-  
+  display: flex;
   justify-content: space-around; 
-  
   align-items:center; 
 }
 
 .seccion ul{
+  text-align: justify;
   list-style-type: none;
   margin: 2px; /* Agrega margen entre las secciones si es necesario */
 }
