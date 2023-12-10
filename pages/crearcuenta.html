@@ -1,113 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vorx - Crear Cuenta</title>
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <link rel="icon" href="../images/logo.ico.ico" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vorx - Crear Cuenta</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="icon" href="../images/logo.ico.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <script src="../assets/js/script.js"></script>
-  </head>
-  <body>
-    <header class="header__index">
-      <div class="div__menu">
-        <div class="div__menu_responsive">
-          <div class="div__logocentro_reponsive">
-            <a href="../index.html">
-              <img class="img__logo" src="../images/logo.jpeg" alt="Logo de Mi Página" />
-            </a>
-          </div>
-          <div class="div__menu_hamburguesa">
-            <button class="button__menu_responsive" id="menu_responsive">
-              <img class='imgham'src="../images/menuham.png" alt="menu" />
-            </button>
-            <button
-              class="button__cerrar_menu_responsive" id="cerrar_menu_responsive">
-              <img class="imgham" src="../images/cancelarham.png" alt="cerrar" />
-            </button>
-          </div>
-        </div>
+</head>
 
-        <div class="div__logocentro">
+<body>
+  <header class="header__index">
+    <div class="div__menu">
+      <div class="div__menu_responsive">
+        <div class="div__logocentro_reponsive">
           <a href="../index.html">
             <img class="img__logo" src="../images/logo.jpeg" alt="Logo de Mi Página" />
           </a>
         </div>
-
-        <div class="div__nav" id="div__navegador">
-          <nav class="nav__menu" id="nav">
-            <ul class="ul__nav">
-              <li class="li__nav">
-                <a class="a__nav" href="../index.html">Inicio</a>
-              </li>
-              <li class="li__nav">
-                <a class="a__nav" href="./productos.html">Productos</a>
-              </li>
-              <li class="li__nav">
-                <a class="a__nav" href="./nosotros.html">Nosotros</a>
-              </li>
-            </ul>
-          </nav>
+        <div class="div__menu_hamburguesa">
+          <button class="button__menu_responsive" id="menu_responsive">
+            <img class='imgham' src="../images/menuham.png" alt="menu" />
+          </button>
+          <button class="button__cerrar_menu_responsive" id="cerrar_menu_responsive">
+            <img class="imgham" src="../images/cancelarham.png" alt="cerrar" />
+          </button>
         </div>
       </div>
-    </header>
+
+      <div class="div__logocentro">
+        <a href="../index.html">
+          <img class="img__logo" src="../images/logo.jpeg" alt="Logo de Mi Página" />
+        </a>
+      </div>
+
+      <div class="div__nav" id="div__navegador">
+        <nav class="nav__menu" id="nav">
+          <ul class="ul__nav">
+            <li class="li__nav">
+              <a class="a__nav" href="../index.html">Inicio</a>
+            </li>
+            <li class="li__nav">
+              <a class="a__nav" href="./productos.html">Productos</a>
+            </li>
+            <li class="li__nav">
+              <a class="a__nav" href="./nosotros.html">Nosotros</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
   <body>
     <main class="main__crear_cuenta">
       <h1>Crear una cuenta:</h1>
-      <Form class="form__crear_cuenta" id="formularioCrearCuenta">
+      <form method="post" action="/store" class="form__crear_cuenta" id="formularioCrearCuenta">
         <div class="div__datos_personales">
           <p class="p__datos_personales">Las opciones marcadas con "*" son obligatórias.</p>
           <ul class="ul__datos_personales">
-          <li>Nombre:* <input type="text"   class="input__datos_personales"></li> 
-          <li>Apellido:* <input type="text"  class="input__datos_personales"></li>
-          <li>Email:* <input type="email"  class="input__datos_personales" placeholder="Ej: vorx@email.com"></li>
-          <li>Contraseña:* <input type="password"  class="input__datos_personales" placeholder="min. 8  max. 16 caracteres" minlength="8" maxlength="16"></li>
-        </ul>
+            <li>Nombre y Apellido:* <input type="text" name="Nombre" id="Nombre" class="input__datos_personales"></li>
+            <li>Email:* <input type="email" name="Email" id="Email" class="input__datos_personales"
+                placeholder="Ej: vorx@email.com"></li>
+            <li>Contraseña:* <input type="password" name="Contraseña" id="Contraseña" class="input__datos_personales"
+                placeholder="min. 8  max. 16 caracteres" minlength="8" maxlength="16"></li>
+          </ul>
         </div>
         <div class="div__consumidores">
           <ul class="ul__consumidores">
-            <li>Fecha de nacimiento: <input type="date"></li>
-            <p class="p__consumidores">¿Cómo nos conociste?:</p> 
-              <li class="li__consumidores"><label for="_midias"><input type="radio" id="_midias" name="consumidor1" class="input__consumidores" value="midias sociales">Midias sociales</label></li>
-              <li class="li__consumidores"><label for="_indicacion"><input type="radio" id="_indicacion" name="consumidor1" class="input__consumidores" value="indicacion de un amgio">Indicación de un amigo</label></li>
-              <li class="li__consumidores"><label for="_otro"><input type="radio" id="_otro" name="consumidor1" class="input__consumidores" value="otro">Otro</label></li>
+            <li>Fecha de nacimiento: <input type="date" name="Fecha_Nacimiento"></li>
+            <p class="p__consumidores">¿Cómo nos conociste?:</p>
+            <li class="li__consumidores"><label for="_midias"><input type="radio" id="_midias" name="consumidor1"
+                  class="input__consumidores" value="midias sociales">Midias sociales</label></li>
+            <li class="li__consumidores"><label for="_indicacion"><input type="radio" id="_indicacion"
+                  name="consumidor1" class="input__consumidores" value="indicacion de un amgio">Indicación de un
+                amigo</label></li>
+            <li class="li__consumidores"><label for="_otro"><input type="radio" id="genero" name="genero"
+                  class="input__consumidores" value="otro">Otro</label></li>
             <p class="p__consumidores">Genero:</p>
-            <li class="li__consumidores"><label for="_masculino_genero"><input type="radio" id="_masculino_genero" name="consumidor2" class="input__consumidores" value="masculino">Masculino</li>
-            <li class="li__consumidores"><label for="_feminino_genero"><input type="radio" id="_feminino_genero" name="consumidor2" class="input__consumidores" value="feminino">Feminino</label></li>
-            <li class="li__consumidores"><label for="_otro_genero"><input type="radio" id="_otro_genero" name="consumidor2" class="input__consumidores" value="otro">Otro</label></li>
+            <li class="li__consumidores"><label for="_masculino_genero"><input type="radio" id="Genero" name="Genero" class="input__consumidores" value="masculino">Masculino</li>
+            <li class="li__consumidores"><label for="_feminino_genero"><input type="radio" id="Genero" name="Genero" class="input__consumidores" value="feminino">Feminino</label></li>
+            <li class="li__consumidores"><label for="_otro_genero"><input type="radio" id="Genero" name="Genero" class="input__consumidores" value="otro">Otro</label></li>
           </ul>
         </div>
         <input type="submit" id="enviar" name="enviar">
-      </Form>
-     </main>
+      </form>
+    </main>
 
-     <footer>
+    <footer>
       <div class="footer-container">
         <div class="seccion animate__animated animate__backInLeft">
           <h3>SIGUENOS</h3>
           <ul>
-            <li> <a href="https://www.instagram.com/" target="_blank" class="icono-ig"><img src="../images/instagram.png" alt="Instagram" /></a></li>
-            <li> <a href="https://m.facebook.com/login/?locale=es_ES" target="_blank" class="icono-fb"><img src="../images/facebook.png" alt="Facebook"/></a></li>
-            <li> <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" target="_blank" class="icono-tiktok"><img src="../images/tik-tok.png" alt="TikTok"/></a></li>
-            <li> <a href="https://web.whatsapp.com/" target="_blank" class="icono-wtspp"><img src="../images/whatsapp.png" alt="WhatsApp"/></a></li>
+            <li> <a href="https://www.instagram.com/" target="_blank" class="icono-ig"><img
+                  src="../images/instagram.png" alt="Instagram" /></a></li>
+            <li> <a href="https://m.facebook.com/login/?locale=es_ES" target="_blank" class="icono-fb"><img
+                  src="../images/facebook.png" alt="Facebook" /></a></li>
+            <li> <a
+                href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des"
+                target="_blank" class="icono-tiktok"><img src="../images/tik-tok.png" alt="TikTok" /></a></li>
+            <li> <a href="https://web.whatsapp.com/" target="_blank" class="icono-wtspp"><img
+                  src="../images/whatsapp.png" alt="WhatsApp" /></a></li>
           </ul>
         </div>
         <div class="seccion animate__animated animate__backInRight">
           <h3>CONOCENOS</h3>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9292.279021737671!2d-58.409410585345505!3d-34.570850883825315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb57475fd5245%3A0x5eefd3cd753143d7!2sPlanetario%20Galileo%20Galilei!5e0!3m2!1ses!2sar"
-            width="250"
-            height="150"
-            style="border: none"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+            width="250" height="150" style="border: none" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
       <br />
@@ -117,4 +124,5 @@
       </div>
     </footer>
   </body>
+
 </html>
