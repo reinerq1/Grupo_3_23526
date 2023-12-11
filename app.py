@@ -1,151 +1,160 @@
-from flask import Flask, request, jsonify, render_template
-
+"""
+from flask import Flask, render_template, jsonify
+from os import path
 import pymysql
-import mysql.connector
+
+app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, static_url_path='/static')
 
 
+# Configura los detalles de la conexión a MySQL
+host = 'localhost'
+usuario = 'root'
+contrasena = '2305'
+base_de_datos = 'vorx'
 
-
-app = Flask(__name__)
-#CORS(app) #ESTO HABILITA CORS PARA TODAS LAS RUTAS
-
-
-
-# CLASE CATALOGO
-class Cliente:
-    def __init__(self, host, user, password, database):
-        self.conn = pymysql.connect(
+@app.route('/')
+def index():
+    # Crea la conexión
+    conexion = pymysql.connect(
         host=host,
-        user=user,
-        password=password,
-        database=database,
+        user=usuario,
+        password=contrasena,
+        db=base_de_datos,
+        charset='utf8mb4',
         cursorclass=pymysql.cursors.DictCursor
     )
-            
-    def agregar_cliente(self, nombre, email, fecha, genero):
-        sql = "INSERT INTO `vorx`.`clientes` (`nombre`, `precio`, `stock`, `imagen_url` ) VALUES (%s, %s, %s, %s);" # ESTO ES UNA CONSULTA PARAMETRIZADA (ES MAS SEGURA) %s ES UNA VARIABLE QUE SE VA A CAMBIAR POR OTRO VALOR EVITA EL SQL INJECTION
-        valores = (nombre, email, fecha, genero)
-        
-        self.cursor.execute(sql, valores)
-        self.conn.commit()
-        return True
-    
-    def traer_clientes_db(self):
-        with self.conn.cursor() as cursor:
-            sql = "SELECT * FROM vorx.cliente;"
+
+    try:
+        # Crea un objeto cursor para ejecutar consultas
+        with conexion.cursor() as cursor:
+            # Ejecuta una consulta (modifica según tus necesidades)
+            sql = "SELECT * FROM vorx.cliente"
             cursor.execute(sql)
-            clientes = cursor.fetchall()
-        return clientes
-"""            
-    def eliminar_producto(self, codigo):
-        #sql = "DELETE FROM `db-tpf`.`productos` WHERE (`id` = " + str(codigo) + ");"
-        sql = (f"DELETE FROM `db-tpf`.`productos` WHERE (`id` = {codigo});") 
-        self.cursor.execute(sql)
-        self.conn.commit()
-        return True
-        
-    def traer_producto_por_id(self, codigo):
-        #sql = "SELECT * FROM `db-tpf`.`productos` WHERE (`id` = " + str(codigo) + ");"
-        sql = (f"SELECT * FROM `db-tpf`.`productos` WHERE (`id` = {codigo});")
-        self.cursor.execute(sql)
-        producto = self.cursor.fetchone()
-        return producto
-        
-    def modificar_producto(self, codigo, nombre, precio, stock):
-        #sql = "UPDATE `db-tpf`.`productos` SET `nombre` = '" + nombre + "', `precio` = " + precio + ", `stock` = " + stock + " WHERE (`id` = " + str(codigo) + ");"
-        sql = "UPDATE `db-tpf`.`productos` SET `nombre` = %s, `precio` = %s, `stock` = %s WHERE (`id` = %s);"
-        valores = (nombre, precio, stock, codigo)
-        
-        self.cursor.execute(sql, valores)
-        self.conn.commit()
-        return True
-"""
 
-# FIN CLASE CATALOGO
+            # Obtiene los resultados
+            resultados = cursor.fetchall()
 
-####################################################
-# PROGRAMA PRINCIPAL
+    finally:
+        # Cierra la conexión
+        conexion.close()
 
-# CREAMOS UN OBJETO DE LA CLASE CATALOGO QUE LE PASA LOS PARAMETROS DE CONEXION
-cliente = Cliente(host='localhost', user='root', password='2305', database='vorx')
+    # Renderiza la plantilla HTML con los resultados de la consulta
+    return render_template('administrador.html', resultados=resultados)
 
-@app.route("/clientesTable", methods=["GET"])
-def traer_clientes():
-    clientes = Cliente.traer_clientes_db()
-
-    clientes_json = []  # ESTO ES UNA LISTA DE DICCIONARIOS
-
-    for cliente in clientes:
-        cliente1_json = {  # ESTO ES UN DICCIONARIO
-            "id": cliente["Id"],
-            "nombre": cliente["Nombre"],
-            "Email": cliente["Email"],
-            "Fecha": cliente["Fecha_Nacimiento"],
-            "Genero": cliente["Genero"]
-        }
-        clientes_json.append(cliente1_json)
-
-    return jsonify(clientes_json), 200  # ESTO ES UNA RESPUESTA HTTP OK
-
-
-"""
-@app.route("/productos", methods=["POST"]) #ESTO ES UN DECORADOR
-def agregar_producto():
-    
-    nombre = request.form['nombre']
-    precio = request.form['precio']
-    stock = request.form['stock']
-    imagen = request.files['imagen'] # ESTO ES UNA VARIABLE DE TIPO FILE STORAGE
-    
-    nombre_imagen = secure_filename(imagen.filename) # ESTO ES PARA QUE EL NOMBRE DE LA IMAGEN NO TENGA CARACTERES RAROS
-    nombre_base, extension = os.path.splitext(nombre_imagen) # ESTO SEPARA EL NOMBRE DE LA IMAGEN DE LA EXTENSION
-    imagen_url = f"{nombre_base}{extension}" # ESTO ES PARA QUE EL NOMBRE DE LA IMAGEN SEA UNICO
-    
-    # ESTO ES PARA GUARDAR LA IMAGEN EN UNA CARPETA    
-    si_se_agrego = catalogo.agregar_producto(nombre, precio, stock, imagen_url)
-    if si_se_agrego:
-        imagen.save(os.path.join(RUTA_DESTINO, imagen_url))
-        
-        return jsonify({"mensaje": "producto agregado"}), 200 # ESTO ES UNA RESPUESTA HTTP OK
-    else:
-       return jsonify({"mensaje": "Error"}), 400 # ESTO ES UNA RESPUESTA HTTP ERROR
-"""
-
-"""
-@app.route("/productos/<int:codigo>", methods=["DELETE"])
-def eliminar_producto(codigo):
-    producto_eliminado = catalogo.eliminar_producto(codigo)
-    if producto_eliminado:
-        return jsonify({"mensaje": "producto eliminado"}), 200
-    else:
-        return jsonify({"mensaje": "Error"}), 400
-
-@app.route("/productos/<int:codigo>", methods=["GET"])
-def traer_producto_por_id(codigo):
-    producto = catalogo.traer_producto_por_id(codigo)
-    if producto:
-        producto_json = { # ESTO ES UN DICCIONARIO
-            "id": producto[0],
-            "nombre": producto[1],
-            "precio": producto[2],
-            "stock": producto[3],
-            "imagen_url": producto[4]
-        }
-        return jsonify(producto_json), 200
-    else:
-        return jsonify({"mensaje": "Producto no encontrado"}), 400
-
-@app.route("/productos/<int:codigo>", methods=["PUT"])
-def modificar_producto(codigo):    
-    nombre = request.form['nombre']
-    precio = request.form['precio']
-    stock = request.form['stock']
-    
-    si_se_modifico = catalogo.modificar_producto(codigo, nombre, precio, stock)
-    if si_se_modifico:
-        return jsonify({"mensaje": "producto modificado"}), 200
-    else:
-        return jsonify({"mensaje": "Error"}), 400
-"""
 if __name__ == '__main__':
-    app.run(port=4000, debug=True)
+    app.run(debug=True, port=4000)
+"""
+from flask import Flask, render_template, jsonify, request, redirect, url_for
+import pymysql
+
+app = Flask(__name__, template_folder='templates', static_url_path='/static')
+
+# Configura los detalles de la conexión a MySQL
+host = 'localhost'
+usuario = 'root'
+contrasena = '2305'
+base_de_datos = 'vorx'
+
+@app.route('/')
+def index():
+    conexion = pymysql.connect(
+        host=host,
+        user=usuario,
+        password=contrasena,
+        db=base_de_datos,
+        charset='utf8mb4',
+        cursorclass=pymysql.cursors.DictCursor
+    )
+
+    try:
+        with conexion.cursor() as cursor:
+            sql = "SELECT * FROM vorx.cliente"
+            cursor.execute(sql)
+            resultados = cursor.fetchall()
+
+    finally:
+        conexion.close()
+
+    return render_template('administrador.html', resultados=resultados)
+
+@app.route('/agregar_cliente', methods=['POST'])
+def agregar_cliente():
+    if request.method == 'POST':
+        nombre = request.form['nombre']
+        email = request.form['email']
+
+        conexion = pymysql.connect(
+            host=host,
+            user=usuario,
+            password=contrasena,
+            db=base_de_datos,
+            charset='utf8mb4',
+            cursorclass=pymysql.cursors.DictCursor
+        )
+
+        try:
+            with conexion.cursor() as cursor:
+                sql = "INSERT INTO vorx.cliente (Nombre, Email) VALUES (%s, %s)"
+                cursor.execute(sql, (nombre, email))
+                conexion.commit()
+
+        finally:
+            conexion.close()
+
+    return redirect(url_for('index'))
+
+@app.route('/editar_cliente/<int:cliente_id>', methods=['GET', 'POST'])
+def editar_cliente(cliente_id):
+    conexion = pymysql.connect(
+        host=host,
+        user=usuario,
+        password=contrasena,
+        db=base_de_datos,
+        charset='utf8mb4',
+        cursorclass=pymysql.cursors.DictCursor
+    )
+
+    try:
+        with conexion.cursor() as cursor:
+            if request.method == 'POST':
+                nombre = request.form['nombre']
+                email = request.form['email']
+
+                sql = "UPDATE vorx.cliente SET Nombre=%s, Email=%s WHERE id=%s"
+                cursor.execute(sql, (nombre, email, cliente_id))
+                conexion.commit()
+
+            sql = "SELECT * FROM vorx.cliente WHERE id=%s"
+            cursor.execute(sql, cliente_id)
+            cliente = cursor.fetchone()
+
+    finally:
+        conexion.close()
+
+    return render_template('editar_cliente.html', cliente=cliente)
+
+@app.route('/eliminar_cliente/<int:cliente_id>')
+def eliminar_cliente(cliente_id):
+    conexion = pymysql.connect(
+        host=host,
+        user=usuario,
+        password=contrasena,
+        db=base_de_datos,
+        charset='utf8mb4',
+        cursorclass=pymysql.cursors.DictCursor
+    )
+
+    try:
+        with conexion.cursor() as cursor:
+            sql = "DELETE FROM vorx.cliente WHERE id=%s"
+            cursor.execute(sql, cliente_id)
+            conexion.commit()
+
+    finally:
+        conexion.close()
+
+    return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    app.run(debug=True, port=4000)
