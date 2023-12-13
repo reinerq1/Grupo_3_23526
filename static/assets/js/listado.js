@@ -1,21 +1,30 @@
-const URL = 'http://localhost:4000';
-const clientesTable = document.getElementById("clientesTable");
+const URL = "http://localhost:4000"
 
-// Realizar la solicitud al servidor para obtener la lista de clientes
-fetch(URL + "/clientes")
-    .then(response => response.json())
-    .then(clientes => {
-        let html = '';
 
-        clientes.forEach(element => {
+
+fetch(URL + '/administrador') // Obtener los productos
+    .then(res => res.json()) // Convertir la respuesta a JSON
+    .then(data => { // Mostrar los datos en consola
+        let html = ''; // Variable para guardar el HTML
+        console.log(data);
+
+        data.forEach(element => {
+
             html = html + `<tr>
-                <td>${element[0]}</td>
-                <td>${element[1]}</td>
-                <td>${element[2]}</td>
-                <td>${element[3]}</td>
-                <td>${element[4]}</td>
-            </tr>`;
+        <td>${element.Id_Cliente}</td>
+        <td>${element.Nombre}</td>
+        <td>${element.Email}</td>
+        <td>${element.Genero}</td>
+        <td>${element.Fecha_Nacimiento}</td>
+        <td><a href="modificar.html?codigo=${element.Id_Cliente}">Modificar</a></td>
+        <td><button class="alert" onclick="eliminar(${element.Id_Cliente});">Eliminar</button></td>
+    </tr>`;
         });
 
-        document.getElementById('clientesTable').innerHTML = html;
+        console.log(document.getElementById('administrador'));
+        document.getElementById('administrador').innerHTML = html;
     })
+
+    .catch (error => {
+        console.error('Error en la solicitud:', error);
+});

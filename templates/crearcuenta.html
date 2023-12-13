@@ -61,19 +61,42 @@
     </div>
   </header>
 
-    <main class="main__index">
-      <div class="div__remera">
-        <a class="a__remera" href="remeras.html">
-          REMERAS
-          <img class="img__remera" src="/static/images/reme.jpeg" alt="Remeras" />
-        </a>
-      </div>
-      <div class="div__buzo">
-        <a class="a__buzo" href="buzo.html">
-          BUZOS
-          <img class="img__buzo" src="/static/images/buzo.jpeg" alt="Buzos" />
-        </a>
-      </div>
+  <body>
+    <main class="main__crear_cuenta">
+      <h1>Crear una cuenta:</h1>
+      <form method="post" action="/crearcuenta.html" class="form__crear_cuenta" id="formularioCrearCuenta">
+        <div class="div__datos_personales">
+            <p class="p__datos_personales">Las opciones marcadas con "*" son obligatorias.</p>
+            <ul class="ul__datos_personales">
+                <li>Nombre y Apellido:* <input type="text" name="Nombre" id="Nombre" class="input__datos_personales"></li>
+                <li>Email:* <input type="email" name="Email" id="Email" class="input__datos_personales"
+                        placeholder="Ej: vorx@email.com"></li>
+                <li>Contraseña:* <input type="password" name="Contraseña" id="Contraseña" class="input__datos_personales"
+                        placeholder="min. 8 max. 16 caracteres" minlength="8" maxlength="16"></li>
+            </ul>
+        </div>
+        <div class="div__consumidores">
+            <ul class="ul__consumidores">
+                <li>Fecha de nacimiento: <input type="date" name="Fecha_Nacimiento"></li>
+                <p class="p__consumidores">¿Cómo nos conociste?:</p>
+                <li class="li__consumidores"><label for="_midias"><input type="radio" id="_midias" name="consumidor1"
+                            class="input__consumidores" value="midias sociales">Midias sociales</label></li>
+                <li class="li__consumidores"><label for="_indicacion"><input type="radio" id="_indicacion"
+                            name="consumidor1" class="input__consumidores" value="indicacion de un amigo">Indicación de un
+                        amigo</label></li>
+                <li class="li__consumidores"><label for="_otro"><input type="radio" id="_otro" name="consumidor1"
+                            class="input__consumidores" value="otro">Otro</label></li>
+                <p class="p__consumidores">Género:</p>
+                <li class="li__consumidores"><label for="_masculino_genero"><input type="radio" id="Genero" name="Genero"
+                            class="input__consumidores" value="masculino">Masculino</label></li>
+                <li class="li__consumidores"><label for="_feminino_genero"><input type="radio" id="Genero" name="Genero"
+                            class="input__consumidores" value="feminino">Feminino</label></li>
+                <li class="li__consumidores"><label for="_otro_genero"><input type="radio" id="Genero" name="Genero"
+                            class="input__consumidores" value="otro">Otro</label></li>
+            </ul>
+        </div>
+        <input type="submit" id="enviar" name="enviar">
+    </form>
     </main>
 
     <footer>
@@ -108,22 +131,5 @@
       </div>
     </footer>
   </body>
-  
-  </html>
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Clientes</title>
-</head>
-<body>
-    <h1>Lista de Clientes</h1>
-    <ul>
-        {% for cliente in resultados %}
-            <li>{{ cliente.Nombre }} - {{ cliente.Email}}</li>
-        {% endfor %}
-    </ul>
-</body>
-</html>-->
+</html>

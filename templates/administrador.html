@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,7 +20,7 @@
     <div class="div__menu">
       <div class="div__menu_responsive">
         <div class="div__logocentro_reponsive">
-          <a href="index.html">
+          <a href="/">
             <img class="img__logo" src="/static/images/logo.jpeg" alt="Logo de Mi Página" />
           </a>
         </div>
@@ -35,7 +35,7 @@
       </div>
 
       <div class="div__logocentro">
-        <a href="index.html">
+        <a href="/">
           <img class="img__logo" src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Logo de Mi Página" />
         </a>
       </div>
@@ -44,16 +44,16 @@
         <nav class="nav__menu" id="nav">
           <ul class="ul__nav">
             <li class="li__nav">
-              <a class="a__nav" href="../pages/crearcuenta.html">Crear cuenta</a>
+              <a class="a__nav" href="crearcuenta.html">Crear cuenta</a>
             </li>
             <li class="li__nav">
-              <a class="a__nav" href="../pages/productos.html">Productos</a>
+              <a class="a__nav" href="productos.html">Productos</a>
             </li>
             <li class="li__nav">
-              <a class="a__nav" href="../pages/nosotros.html">Nosotros</a>
+              <a class="a__nav" href="nosotros.html">Nosotros</a>
             </li>
             <li class="li__nav">
-              <a class="a__nav" href="../pages/administrador.html">Administrador</a>
+              <a class="a__nav" href="administrador.html">Administrador</a>
             </li>
           </ul>
         </nav>
@@ -61,14 +61,19 @@
     </div>
   </header>
 
-  <main class="main__index">
-    <h1>Lista de Clientes</h1>
-    <ul>
-      {% for cliente in resultados %}
-      <li>{{ cliente.Nombre }} - {{ cliente.Email}}</li>
-      {% endfor %}
-    </ul>
-  </main>
+  <main class="main__index">  
+    <h1> Lista de Clientes</h1>
+ <!--   {% if resultados %}
+       <ul>
+          {% for cliente in resultados %}
+            <li>{{ cliente.Nombre }} - {{ cliente.Email}} 
+          {% endfor %}
+       </ul>
+     {% else %}
+       <p>No hay datos de clientes disponibles.</p>
+    {% endif %}-->
+ </main>
+ <script> src="{{ url_for('static', filename='assets/js/script.js') }}"</script>
 
   <footer>
     <div class="footer-container">
@@ -103,7 +108,8 @@
   </footer>
 </body>
 
-</html>-->
+</html>
+<!--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -150,10 +156,10 @@
         <nav class="nav__menu" id="nav">
           <ul class="ul__nav">
             <li class="li__nav">
-              <a class="a__nav" href="{{ url_for('index') }}">Lista de Clientes</a>
+              <a class="a__nav" href="index">Lista de Clientes</a>
             </li>
             <li class="li__nav">
-              <a class="a__nav" href="{{ url_for('agregar_cliente') }}">Agregar Cliente</a>
+              <a class="a__nav" href="/agregarcliente">Agregar Cliente</a>
             </li>
           </ul>
         </nav>
@@ -166,8 +172,7 @@
     <ul>
       {% for cliente in resultados %}
         <li>{{ cliente.Nombre }} - {{ cliente.Email}} 
-          <a href="{{ url_for('editar_cliente', cliente_id=cliente.id) }}">Editar</a> 
-          <a href="{{ url_for('eliminar_cliente', cliente_id=cliente.id) }}" onclick="return confirm('¿Estás seguro?')">Eliminar</a>
+          
         </li>
       {% endfor %}
     </ul>
@@ -206,3 +211,4 @@
   </footer>
 </body>
 
+-->

@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var msg =
         "Su cuenta fue creada correctamente! Haga click acá para seguir.";
       alert(msg);
-      formulario.setAttribute("action", "../index.html");
+      formulario.setAttribute("action", "/crearcuenta.html");
 
     } else {
       var msg =
